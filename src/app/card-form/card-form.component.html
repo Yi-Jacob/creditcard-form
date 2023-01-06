@@ -1,3 +1,13 @@
+<div class="columns">
+<div class="column">
+<app-card
+  [name]="cardForm.value.name"
+  [cardNumber]="cardForm.value.cardNumber"
+  [expiration]="cardForm.value.expiration"
+>
+</app-card>
+</div>
+<div class="column">
 <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
   <app-input label="Name" [control]="cardForm.get('name')"></app-input>
   <app-input
@@ -31,7 +41,8 @@
     </button>
   </div>
 </form>
-
+</div>
+  </div>
 <div>
-  {{ cardForm.value | json}}
+  {{ cardForm.value | json }}
 </div>
